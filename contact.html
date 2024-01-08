@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Resto Pizza</title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="top-nav">
+    <div>
+      <a href="index.html"><img src="assets/logo/Pizza_logo_resto-removebg-preview.png" style="height: 50px;"></a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      <li><a href="#">Qui sommes-nous ?</a></li>
+      <li><a href="#">Nos pizzas</a></li>
+      <li><a href="contact.html">Nous contacter</a></li>
+    </ul>
+  </section>
+
+      <main>
+
+        <article>
+            
+            <section class="formucarte">
+                  <form>
+                    <h1 class="title">Contact</h1>
+                    
+                    <div class="form-group">
+
+                      <div class="firstName">
+                        <label>Nom*</label>
+                        <input type="text" id="fname" name="fname" required>
+                      </div>
+
+                      <div class="lastName">
+                        <label>Prénom*</label>
+                        <input type="text" id="lname" name="lname" required>
+                      </div>
+
+                      <div class="mail">
+                        <label>E-mail*</label>
+                        <input type="email" id="email" name="email" required>
+                      </div>
+
+                      <div class="tel">
+                        <label>Téléphone</label>
+                        <input type="tel" id="phone" name="phone">
+                      </div>
+
+                      <div class="subject">
+                        <label for="subject">Sujet*</label>
+                        <input type="text" name="" id="" required>
+                      </div>
+
+                      <div class="msg">
+                        <label for="message">Message*</label>
+                        <textarea id="message" name="message" rows="3" required></textarea>
+                      </div>
+
+                      <div class="file">
+                        <label for="upload">Ajouter une pièce jointe (image uniquement)</label>
+                        <input type="file" id="upload" name="photo" accept="image/png, image/jpeg" />
+                      </div>
+
+                      <div class="pdc">
+                        <input type="checkbox" name="pdc" id="pdc" required>
+                        <label for="pdc">
+                        J'accepte que mes données personnelles soient utilisées dans le cadre de ma demande et je confirme avoir lu la politique de confidentialité.*
+                        </label>
+                      </div>
+
+                      <input id="send_button"type="submit" value="ENVOYER">
+                    
+                    </div>
+
+                  </form>
+              </section>
+        </article>
+      </main>
+
+      <footer>
+        
+        <div class="footer_item"><a href="#">Politique de confidentialité</a></div>
+        <div class="footer_item"><a href="#">Nous contacter</a></div>
+        <div class="footer_item"><a href="#">Mentions légales</a></div>
+        
+      </footer>
+
+</body>

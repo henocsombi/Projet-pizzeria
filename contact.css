@@ -1,0 +1,325 @@
+*,
+::before,
+::after{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style-type: none;
+    font-family:'Inter', sans-serif;
+
+}
+
+:root{
+
+    --header-color: #D95F5F;
+    --main-color: #DF5E5E;
+    --second-color: #FFF8E5;
+    --p-main-color: #7D6A6D;
+    --p-main-color2: #5B454E;
+    --p-second-color: #FEF3E0;
+    --green: #06A19D;
+    --yellow: #FFC43B;
+    
+
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+label{
+ color: var(--p-main-color2);
+ font-size: 1.25rem;
+ width: 100%;
+}
+
+.title{
+
+    font-family: 'Ephesis', cursive;
+    font-size: 6.25rem;
+    font-weight: 500;
+    color: var(--p-main-color2);
+    text-align: center;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-color);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #FFF;
+    height: 100px;
+    padding: 1em;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu > li {
+    
+    margin: 0 1rem;
+    overflow: hidden;
+    font-size: 1.5rem;
+  }
+  
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+
+main{
+    background-image: url(assets/images/bg_main_contact.svg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 7.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+article{
+    background-color: white;
+    width: 80%;
+    min-height: 90rem;
+    margin: 5%;
+    padding: 5rem;
+    box-shadow: 0px 0px 10px lightgrey;
+
+}
+
+
+.form-group{
+    margin: 5rem 0;
+    padding: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.firstName, .lastName, .tel, .mail{
+    width: 45%;
+ 
+}
+
+input{
+    width:100%;
+    height: 2rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.subject input{
+    width: 100%;
+}
+
+.subject, .msg, .file, .pdc{
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    min-height:31.25rem ;
+    margin: 1rem 0 2rem 0;
+}
+
+.file label{
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35rem;
+    height: 3.125rem;
+    border-radius: 3rem;
+    border: 1px solid var(--main-color);
+    background-color: var(--p-second-color);
+    color: var(--main-color);
+}
+#upload{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#pdc{
+    width: 1.25rem;
+}
+
+.pdc{
+    display: flex;
+    align-items: end;
+}
+
+.pdc label{
+    margin: 1rem;
+}
+
+#send_button{
+
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.125rem;
+    border-radius: 3rem;
+    border: 1px solid var(--main-color);
+    background-color: var(--p-second-color);
+    color: var(--main-color);
+
+}
+
+footer{
+    margin-top: 20rem;
+    height: 7.813rem;
+    width: 100%;
+    background-color: var(--green);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer_item{
+    font-size: 1.75rem;
+}
+
+/****************************************************************************/
+
+@media (max-width: 390px) {
+    .menu-button-container {
+      display: flex;
+     }
+    .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 6.25rem;
+      left: 0;
+       flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+     }
+     #menu-toggle:checked ~ .menu li {
+      border: 1px solid var(--header-color);
+      height: 2.5em;
+      padding: 0.5em;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+      display: flex;
+      justify-content: center;
+       margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+       color: var(--header-color);
+      background-color: var(--second-color);
+    }
+    main{
+        background-image: unset;
+        margin: 0;
+        height: unset;
+      }
+    
+      article{
+        width: 100%;
+        padding: 0;
+        margin:0;
+        box-shadow: unset;
+        min-height: 0;
+      }
+      .title{
+        margin: 3rem 1rem 0 0;
+      }
+      .form-group{
+        margin-top: 2rem;
+      }
+      .firstName, .lastName, .tel, .mail{
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+        min-height:15rem;
+        margin: 1rem 0 2rem 0;
+    }
+    .file label{
+        width: 100%;
+        padding: 1rem 1rem;
+        text-align: center;
+    }
+    footer{
+        margin-top: 0;
+        justify-content: center;
+        height: auto;
+        flex-direction: column;
+      }
+      .footer_item{
+        font-size: 1.2rem;
+        padding: 2%;
+        margin: 0 5%;
+      }
+
+}
